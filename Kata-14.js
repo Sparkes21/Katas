@@ -13,10 +13,10 @@ const calculateChange = function(total, cash) {
     amount = Math.floor(returnValue/coinValues[i]);
     if (amount > 0) {
       change[coinTypes[i]] = amount;
-      returnValue = returnValue%coinTypes[i]
+      returnValue = returnValue%coinValues[i]
     }
   }
-  
+
 
 
   return change;
