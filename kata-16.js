@@ -27,6 +27,13 @@ const makeCase = function (input, cases) {
       }
     } return newString.charAt(0).toUpperCase() + newString.slice(1);
   }
+  if (cases === 'snake') {
+    return input.replaceAll(' ', '_')
+  }
+  if (cases === 'kebab') {
+    return input.replaceAll(' ', '-')
+  }
+  
 }
 
 console.log(makeCase("this is a string", "camel"));
