@@ -5,8 +5,8 @@ const makeCase = function (input, cases) {
     let newString = '';
     for (let i = 0; i < input.length; i++) {
       if (input[i] === ' ') {
-        let captial = input[i + 1].toUpperCase();
-        newString += captial;
+        let capital = input[i + 1].toUpperCase();
+        newString += capital;
         i++;
       }
       else if (input[i] !== ' ') {
@@ -18,8 +18,8 @@ const makeCase = function (input, cases) {
     let newString = '';
     for (let i = 0; i < input.length; i++) {
       if (input[i] === ' ') {
-        let captial = input[i + 1].toUpperCase();
-        newString += captial;
+        let capital = input[i + 1].toUpperCase();
+        newString += capital;
         i++;
       }
       else if (input[i] !== ' ') {
@@ -33,7 +33,32 @@ const makeCase = function (input, cases) {
   if (cases === 'kebab') {
     return input.replaceAll(' ', '-')
   }
-  
+  if (cases === 'title') {
+    let newString = '';
+    for (let i = 0; i < input.length; i++) {
+      if (input[i] === ' ') {
+        let capital = input[i + 1].toUpperCase();
+        newString += ` ${capital}`;
+        i++;
+      }
+      else if (input[i] !== ' ') {
+        newString += input[i];
+      }
+    } return newString.charAt(0).toUpperCase() + newString.slice(1);
+  }
+  if (cases === 'vowel') {
+    let newString = '';
+    for (let i = 0; i < input.length; i++) {
+      if (input[i] === 'a' || input[i] === 'e' || input[i] === 'i' || input[i] === 'o' || input[i] === 'u') {
+        let capital = input[i].toUpperCase();
+        newString += capital;
+      }
+      else {
+        newString += input[i];
+      }
+    } return newString;
+  }
+ 
 }
 
 console.log(makeCase("this is a string", "camel"));
