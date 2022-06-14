@@ -58,7 +58,18 @@ const makeCase = function (input, cases) {
       }
     } return newString;
   }
- 
+  if (cases === 'consonant') {
+    let newString = '';
+    for (let i = 0; i < input.length; i++) {
+      if (input[i] === 'a' || input[i] === 'e' || input[i] === 'i' || input[i] === 'o' || input[i] === 'u') {
+        newString += input[i];
+      }
+      else {
+        let capital = input[i].toUpperCase();
+        newString += capital;
+      }
+    } return newString;
+  }
 }
 
 console.log(makeCase("this is a string", "camel"));
