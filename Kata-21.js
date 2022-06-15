@@ -10,19 +10,22 @@ let guess;
 while (guess !== number) {
   let guess = prompt("Guess a number between 1-100: ");
   if (attemptsArr.includes(guess)) {
-    console.log("Already guessed.")
+    console.log("Already guessed.");
+    continue;
   } else if (!isNaN(guess)) {
     attemptsArr.push(guess);
   } 
 
-  if (guess > answer) {
+  if (guess > number) {
     console.log('Too High!')
-  } else if (guess < answer) {
+  } else if (guess < number) {
     console.log('Too Low!')
   } else if (isNaN(guess)) {
     console.log('Not a number, try again!');
   } else {
     console.log(`Correct! You took ${attemptsArr.length} attempts.`)
+    break;
+
   }
 }
 
