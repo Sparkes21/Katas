@@ -1,11 +1,9 @@
 let prompt = require("prompt-sync")();
 
 // code below (replace this example)
-
 const number = Math.floor(Math.random() * 100);
 let attemptsArr = [];
 let guess;
-
 
 while (guess !== number) {
   let guess = prompt("Guess a number between 1-100: ");
@@ -15,7 +13,6 @@ while (guess !== number) {
   } else if (!isNaN(guess)) {
     attemptsArr.push(guess);
   } 
-
   if (guess > number) {
     console.log('Too High!')
   } else if (guess < number) {
@@ -25,7 +22,6 @@ while (guess !== number) {
   } else {
     console.log(`Correct! You took ${attemptsArr.length} attempts.`)
     break;
-
   }
 }
 
