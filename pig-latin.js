@@ -1,7 +1,8 @@
 
 function pigLatin(string) {
-  
-    let firstLetter = string.slice(1)
+    let newString = string.split(' ')
+    console.log('newString', newString)
+    let firstLetter = newString.slice(1)
     console.log(firstLetter + 'ay');
   
 }
