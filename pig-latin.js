@@ -3,7 +3,7 @@ let lastString = strings[strings.length - 1];
 let translatedSentence = '';
 
 function pigLatin(strings) {
-  let translatedStrings = '';
+  let translatedStrings = ' ';
 
   for (let i = 1; i < strings.length; i++) {
     translatedStrings += strings[i];
@@ -19,7 +19,7 @@ strings.forEach(function(strings) {
   translatedSentence += pigLatin(strings);
 });
 
-console.log(translatedSentence);
+ console.log(translatedSentence);
 
 // function pigLatin(strings) {
 //     let newString = string.split(' ')
